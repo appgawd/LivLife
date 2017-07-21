@@ -23,6 +23,7 @@ public class Utilities {
     final static String[] min = new String[60];
     final static String[] amPm = {"AM", "PM"};
 
+    //test
     final static String[] fonts = {"heebo_thin", "heebo_thin", "bebas", "heebo_thin", "nova", "iceland", "heebo_thin", "nova", "iceland", "heebo_thin", "nova", "iceland"};
     final static String[] fontsC = {"heebo_light", "heebo_light", "ubuntu_thin", "nova", "nova", "roboto", "iceland", "iceland", "nova", "nova", "nova", "heebo_thin"};
 
