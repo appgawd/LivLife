@@ -6,60 +6,76 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/background_image"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:orientation="horizontal"
-        android:layout_alignBottom="@id/background_image"
         android:background="@color/main_cyan">
 
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <Button android:id="@+id/calculator_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:text="@string/lifespan_calculator"
-                android:layout_gravity="center_horizontal"
-                android:textColor="#ffffff"
-                android:onClick="onClick"/>
-
-        </LinearLayout>
-
-    <LinearLayout
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
-
-        <Button android:id="@+id/custom_button"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:text="@string/custom_time"
-            android:textColor="@android:color/black"
-            android:layout_gravity="center_horizontal"
-            android:onClick="onClick"/>
+            android:layout_centerInParent="true">
 
-        <ImageView
-            android:layout_width="23dp"
-            android:layout_height="15dp"
-            android:paddingBottom="5dp"
-            android:src="@drawable/carpe_diem_triangle_white"
-            android:scaleType="fitXY"
-            android:baselineAlignBottom="true"/>
+            <View
+                android:layout_centerInParent="true"
+                android:layout_width="0dp"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginRight="25dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/divider"/>
 
-    </LinearLayout>
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_toLeftOf="@id/divider">
 
+                <Button android:id="@+id/calculator_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="@string/lifespan_calculator"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#ffffff"
+                    android:onClick="onClick"/>
 
-</LinearLayout>
+                <View
+                    android:layout_width="23dp"
+                    android:layout_height="15dp"
+                    android:paddingBottom="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_toRightOf="@id/divider"
+                android:layout_centerVertical="true">
+
+                <Button android:id="@+id/custom_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="@string/custom_time"
+                    android:onClick="onClick"
+                    android:textColor="@android:color/black" />
+
+                <ImageView
+                    android:layout_width="23dp"
+                    android:layout_height="15dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/carpe_diem_triangle_white"
+                    android:scaleType="fitXY"
+                    android:baselineAlignBottom="true"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
 
     <ScrollView
     android:layout_width="match_parent"

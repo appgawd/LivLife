@@ -6,21 +6,32 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/background_image"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:orientation="horizontal"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:background="@color/main_cyan">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <View
+                android:layout_centerInParent="true"
+                android:layout_width="0dp"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginRight="25dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/divider"/>
+
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_weight="1"
-            android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_width="wrap_content"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:layout_toLeftOf="@id/divider">
 
             <Button android:id="@+id/calculator_button"
                 android:layout_width="wrap_content"
@@ -41,23 +52,29 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_toRightOf="@id/divider"
+            android:layout_centerVertical="true">
 
             <Button android:id="@+id/custom_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:text="@string/custom_time"
-                android:layout_gravity="center_horizontal"
                 android:onClick="onClick"
                 android:textColor="#ffffff"/>
 
+            <View
+                android:layout_width="23dp"
+                android:layout_height="15dp"
+                android:paddingBottom="5dp" />
+
         </LinearLayout>
-    </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -475,10 +492,10 @@
                 android:text="In general, how healthy are you?"/>
 
             <CheckBox
-                android:id="@+id/health_very"
+                android:id="@+id/health_unhealthy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Very"
+                android:text="Unhealthy"
                 android:onClick="onCheckBoxClicked"/>
 
             <CheckBox
@@ -489,10 +506,10 @@
                 android:onClick="onCheckBoxClicked"/>
 
             <CheckBox
-                android:id="@+id/health_unhealthy"
+                android:id="@+id/health_very"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Unhealthy"
+                android:text="Very"
                 android:onClick="onCheckBoxClicked"/>
 
             <TextView
@@ -503,10 +520,10 @@
                 android:text="Which describes your general outlook on life?"/>
 
             <CheckBox
-                android:id="@+id/outlook_optimistic"
+                android:id="@+id/outlook_pessimistic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Optimistic"
+                android:text="Pessimistic"
                 android:onClick="onCheckBoxClicked"/>
 
             <CheckBox
@@ -517,10 +534,10 @@
                 android:onClick="onCheckBoxClicked"/>
 
             <CheckBox
-                android:id="@+id/outlook_pessimistic"
+                android:id="@+id/outlook_optimistic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pessimistic"
+                android:text="Optimistic"
                 android:onClick="onCheckBoxClicked"/>
 
             <TextView
@@ -531,10 +548,10 @@
                 android:text="How much alcohol do you drink?"/>
 
             <CheckBox
-                android:id="@+id/alcohol_little"
+                android:id="@+id/alcohol_alot"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Little to none"
+                android:text="Alot"
                 android:onClick="onCheckBoxClicked"/>
 
             <CheckBox
@@ -545,10 +562,10 @@
                 android:onClick="onCheckBoxClicked"/>
 
             <CheckBox
-                android:id="@+id/alcohol_alot"
+                android:id="@+id/alcohol_little"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Alot"
+                android:text="Little to none"
                 android:onClick="onCheckBoxClicked"/>
 
             <TextView

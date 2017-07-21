@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         quoteText.setTypeface(roboto);
         //setFont(countdownFont, quoteText, this);
 
-        //runAds();
+        runAds();
 
         //startButtonListeners();
 

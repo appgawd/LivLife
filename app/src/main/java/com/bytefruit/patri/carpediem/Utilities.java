@@ -99,9 +99,9 @@ public class Utilities {
         datePickerDays.setWrapSelectorWheel(true);
         datePickerYears.setWrapSelectorWheel(true);
 
-        datePickerMonths.setValue(thisMonth-1);
-        datePickerDays.setValue(thisDay-1);
-        //datePickerYears.setValue(-1);
+        datePickerMonths.setValue(0);
+        datePickerDays.setValue(0);
+        datePickerYears.setValue(18);
 
         //Set a value change listener for NumberPicker
         datePickerYears.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
