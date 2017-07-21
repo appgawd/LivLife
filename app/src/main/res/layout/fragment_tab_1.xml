@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/bluegreen_mountains"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id = "@+id/hex_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "@string/default_quote_text"
+        android:paddingTop="150dp"
+        android:paddingLeft="15dp"
+        android:layout_alignParentLeft="true"
+        android:textSize="15dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id = "@+id/hex_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "@string/countdown_string_preset"
+        android:layout_below="@+id/hex_text"
+        android:paddingBottom="135dp"
+        android:paddingLeft="15dp"
+        android:textSize="15dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id = "@+id/birds_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "@string/default_quote_text"
+        android:paddingTop="150dp"
+        android:paddingLeft="15dp"
+        android:layout_alignParentLeft="true"
+        android:textSize="15dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id = "@+id/birds_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "@string/countdown_string_preset"
+        android:layout_below="@+id/birds_text"
+        android:paddingBottom="135dp"
+        android:paddingLeft="15dp"
+        android:textSize="15dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id = "@+id/mosaic_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "@string/default_quote_text"
+        android:paddingTop="150dp"
+        android:paddingLeft="15dp"
+        android:layout_alignParentLeft="true"
+        android:textSize="15dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id = "@+id/mosaic_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "@string/countdown_string_preset"
+        android:layout_below="@+id/mosaic_text"
+        android:paddingBottom="135dp"
+        android:paddingLeft="15dp"
+        android:textSize="15dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id = "@+id/heartbeat_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "@string/default_quote_text"
+        android:paddingTop="150dp"
+        android:paddingLeft="15dp"
+        android:layout_alignParentLeft="true"
+        android:textSize="15dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id = "@+id/heartbeat_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "@string/countdown_string_preset"
+        android:layout_below="@+id/heartbeat_text"
+        android:paddingBottom="135dp"
+        android:paddingLeft="15dp"
+        android:textSize="15dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id = "@+id/red_lines_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "@string/default_quote_text"
+        android:paddingTop="150dp"
+        android:paddingLeft="15dp"
+        android:layout_alignParentLeft="true"
+        android:textSize="20dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id = "@+id/red_lines_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "@string/countdown_string_preset"
+        android:layout_below="@+id/red_lines_text"
+        android:paddingBottom="135dp"
+        android:paddingLeft="15dp"
+        android:textSize="15dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id = "@+id/blue_pyramid_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "@string/default_quote_text"
+        android:paddingTop="150dp"
+        android:paddingLeft="15dp"
+        android:layout_alignParentLeft="true"
+        android:textSize="15dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id = "@+id/blue_pyramid_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "@string/countdown_string_preset"
+        android:layout_below="@+id/blue_pyramid_text"
+        android:paddingBottom="135dp"
+        android:paddingLeft="15dp"
+        android:textSize="15dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

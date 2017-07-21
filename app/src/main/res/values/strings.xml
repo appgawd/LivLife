@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CarpeDiem</string>
+    <string name="lifespan_calculator">Lifespan Calculator</string>
+    <string name="custom_time">Custom Date</string>
+    <string name="back_to_homepage">HOMEPAGE</string>
+    <string name="back_button">BACK</string>
+    <string name="default_quote_text">Time left to LivLife:</string>
+    <string name="timeLeftAfterThisYear">Time Left After This Year</string>
+    <string name="zero_time_gregorian">0y 00m 00d\n00h 00m 00s 000ms</string>
+    <string name="zero_time_years">00.0000000000 Years</string>
+    <string name="countdown_string_preset">87.6538482989 Years</string>
+</resources>

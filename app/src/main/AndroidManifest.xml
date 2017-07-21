@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.bytefruit.patri.carpediem">
+
+    <uses-sdk android:minSdkVersion="7" />
+
+    <uses-feature android:name="android.software.live_wallpaper" />
+
+
+
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="LivLife"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service
+            android:name="com.bytefruit.patri.carpediem.LiveWallpaper"
+            android:label="LivLife LiveWallpaper"
+            android:permission="android.permission.BIND_WALLPAPER">
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/wallpaper" />
+        </service>
+
+        <activity
+            android:name="com.bytefruit.patri.carpediem.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.bytefruit.patri.carpediem.CustomTime"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.bytefruit.patri.carpediem.LifespanCalculator"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.bytefruit.patri.carpediem.DisplayLifespanEstimate"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.bytefruit.patri.carpediem.ViewLiveWallpaper"></activity>
+    </application>
+
+</manifest>

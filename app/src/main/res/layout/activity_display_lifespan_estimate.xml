@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View android:id = "@+id/place_holder_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rectangle_at_top_height"
+        android:layout_alignParentBottom="true"/>
+
+    <RelativeLayout
+        android:id="@+id/activity_display_lifespan_estimate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/place_holder_view"
+        tools:context="com.bytefruit.patri.carpediem.DisplayLifespanEstimate">
+
+        <RelativeLayout
+            android:id="@+id/background_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/background_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+        </RelativeLayout>
+
+        <TextView android:id = "@+id/countdown"
+            android:textSize="@dimen/countdown_font_size_years"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="63.2342432434 Years"
+            android:layout_centerInParent="true" />
+
+        <TextView android:id = "@+id/countdown_copy"
+            android:textSize="@dimen/countdown_font_size_years"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="63.2342432434 Years"
+            android:layout_centerInParent="true"
+            android:maxLines="1"
+            android:visibility="invisible"/>
+
+        <LinearLayout
+            android:id="@+id/countdown_and_quote_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:layout_centerHorizontal="true">
+
+            <EditText android:id = "@+id/quote_text"
+                android:textSize="@dimen/countdown_font_size_years"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textNoSuggestions"
+                android:maxLines="1"
+                android:text="@string/default_quote_text"
+                android:textColor="@color/androidDefaultTextViewTextColor"
+                android:layout_gravity="left"
+                android:background="@null" />
+
+            <TextView
+                android:id="@+id/quote_text_uneditable"
+                android:textSize="@dimen/countdown_font_size_years"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_quote_text"
+                android:textColor="@color/androidDefaultTextViewTextColor"
+                android:layout_gravity="left"
+                android:maxLines="1" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout android:id="@+id/size_slider_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rectangle_at_top_height"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout android:id="@+id/size_slider_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/androidDefaultActivityBackgroundWhite">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_for_size_slider"
+                android:background="#000"
+                android:layout_alignParentTop="true"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+                <SeekBar
+                    android:id="@+id/size_slider_quote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <SeekBar
+                    android:id="@+id/size_slider_countdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/size_slider_quote"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_for_size_slider"
+                android:background="#000"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout android:id="@+id/rectangle_at_the_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rectangle_at_top_height"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout android:id="@+id/countdown_format_button"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="#898989"
+            android:onClick="onClick">
+
+            <ImageView
+                android:id="@+id/clock_button"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout android:id="@+id/edit_text_button"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="#afafaf"
+            android:onClick="onClick">
+
+            <ImageView
+                android:id="@+id/text_button"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+
+        <RelativeLayout android:id="@+id/text_size_button"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="#a5a5a5"
+            android:onClick="onClick">
+
+            <ImageView
+                android:id="@+id/font_size_button"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout android:id="@+id/set_background_button"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="#bebebe"
+            android:onClick="onClick">
+
+            <ImageView
+                android:id="@+id/pick_bg_button"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout android:id="@+id/save_wallpaper_style"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="#969696"
+            android:onClick="onClick">
+
+            <ImageView
+                android:id="@+id/check_circle"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

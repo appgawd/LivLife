@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/activity_view_live_wallpaper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.bytefruit.patri.carpediem.DisplayLifespanEstimate">
+
+        <LinearLayout
+            android:id="@+id/countdown_and_quote_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:layout_centerInParent="true">
+
+            <TextView android:id = "@+id/quote_text"
+                android:paddingTop="15dp"
+                android:textSize="@dimen/countdown_font_size_years"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:maxLength="25"
+                android:inputType="textNoSuggestions"
+                android:text="@string/default_quote_text"
+                android:textColor="@color/androidDefaultTextViewTextColor"
+                android:layout_gravity="left" />
+
+            <TextView android:id = "@+id/countdown"
+                android:textSize="@dimen/countdown_font_size_years"
+                android:paddingBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="63.2342432434 Years" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_dialog_rl"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/androidDefaultTextViewTextColor"
+        android:layout_below="@+id/indicator">
+    </android.support.v4.view.ViewPager>
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/indicator"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:radius="5dp"
+        app:strokeColor="#000000"
+        app:fillColor="#dedede"
+        app:strokeWidth="2dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/pager"
+        android:layout_alignLeft="@+id/pager"/>
+
+    <Button
+        android:id="@+id/set_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SET BACKGROUND"
+        android:layout_below="@+id/pager"
+        android:background="#ff6565"
+        android:textColor="#ffffff"
+        android:layout_alignRight="@+id/pager"
+        android:layout_alignLeft="@+id/pager"/>
+
+    </RelativeLayout>

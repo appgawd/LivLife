@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_vertical_margin">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/years_decimal"
+        android:paddingTop="10dp"
+        android:textSize="@dimen/date_format_picker_font_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="23.4323243432243 Years" />
+
+        <Button
+            android:id="@+id/years_decimal_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="Pick"
+            android:textColor="@color/androidDefaultLineBlue"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/androidDefaultLineBlue" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:paddingTop="10dp"
+        android:id= "@+id/date_format_gregorian"
+        android:textSize="@dimen/date_format_picker_font_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "444y 43m 43d 34h 43m 43s 34ms" />
+
+        <Button
+            android:id="@+id/date_format_gregorian_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="Pick"
+            android:textColor="@color/androidDefaultLineBlue"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/date_format_gregorian"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

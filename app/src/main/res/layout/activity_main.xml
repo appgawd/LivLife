@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_lifespan_calculator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+
+    android:paddingTop="0dp"
+    tools:context="com.bytefruit.patri.carpediem.LifespanCalculator">
+
+    <TextView android:id = "@+id/countdown"
+        android:textSize="@dimen/countdown_font_size_years"
+        android:paddingBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zero_time_years"
+        android:layout_centerInParent="true" />
+
+    <TextView android:id = "@+id/quote_text"
+        android:paddingTop="20dp"
+        android:textSize="@dimen/countdown_font_size_years"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/default_quote_text"
+        android:layout_above="@id/countdown"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:id = "@+id/logo"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/quote_text"
+        android:layout_centerHorizontal="true"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/logo"
+        android:background="@color/main_cyan"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/countdown"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+    <Button
+        android:id="@+id/set_time_for_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="SET TIME FOR COUNTDOWN"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="1"
+        android:onClick="onClick"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/button_text_size"
+        android:background="@xml/button_selector" />
+
+    <Button
+        android:id="@+id/customize_wallpaper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Customize Wallpaper"
+        android:layout_below="@+id/set_time_for_countdown"
+        android:layout_weight="1"
+        android:onClick="onClick"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/button_text_size"
+        android:background="@xml/button_selector"
+        android:layout_marginTop="@dimen/button_top_pad"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/view_wallpaper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="VIEW LIVE WALLPAPER"
+        android:layout_below="@+id/customize_wallpaper"
+        android:layout_weight="1"
+        android:onClick="onClick"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/button_text_size"
+        android:background="@xml/button_selector"
+        android:layout_marginTop="@dimen/button_top_pad"/>
+
+    <Button
+        android:id="@+id/set_as_live_wallpaper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="SET LIVE WALLPAPER"
+        android:layout_below="@+id/view_wallpaper"
+        android:layout_weight="1"
+        android:onClick="onClick"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/button_text_size"
+        android:background="@xml/button_selector"
+        android:layout_marginTop="@dimen/button_top_pad"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
