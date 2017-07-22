@@ -68,7 +68,7 @@ public class Utilities {
         //Log.d("","sdf");
     }
 
-    public static void datePicker(final NumberPicker datePickerMonths, final NumberPicker datePickerDays, final NumberPicker datePickerYears, final boolean isFutureDate){
+    public static void datePicker(final NumberPicker datePickerMonths, final NumberPicker datePickerDays, final NumberPicker datePickerYears, final boolean isFutureDate) {
 
         Date currentDate = Calendar.getInstance().getTime();
 
@@ -77,7 +77,6 @@ public class Utilities {
         final int thisDay = getDayOfMonth(currentDate);
 
         final String[] years = getYearsPossiblePicker(isFutureDate, thisYear);
-
 
 
         datePickerMonths.setDisplayedValues(months);
@@ -91,17 +90,22 @@ public class Utilities {
         datePickerYears.setMinValue(0);
 
         //Specify the maximum value/number of NumberPicker
-        datePickerMonths.setMaxValue(months.length-1); //to array last value
+        datePickerMonths.setMaxValue(months.length - 1); //to array last value
         datePickerDays.setMaxValue(days.length - 1 - (31 - getDaysInMonth(thisMonth, thisYear)));
-        datePickerYears.setMaxValue(years.length-1); //to array last value
+        datePickerYears.setMaxValue(years.length - 1); //to array last value
 
         datePickerMonths.setWrapSelectorWheel(true);
         datePickerDays.setWrapSelectorWheel(true);
         datePickerYears.setWrapSelectorWheel(true);
 
-        datePickerMonths.setValue(0);
+        if (isFutureDate) {
+            datePickerMonths.setValue(thisMonth -1);
+            datePickerDays.setValue(thisDay - 1);
+        } else{
+            datePickerMonths.setValue(0);
         datePickerDays.setValue(0);
         datePickerYears.setValue(18);
+         }
 
         //Set a value change listener for NumberPicker
         datePickerYears.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
