@@ -12,14 +12,14 @@
 
     <TextView android:id = "@+id/countdown"
         android:textSize="@dimen/countdown_font_size_years"
-        android:paddingBottom="20dp"
+        android:paddingBottom="25dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/zero_time_years"
         android:layout_centerInParent="true" />
 
     <TextView android:id = "@+id/quote_text"
-        android:paddingTop="20dp"
+        android:paddingTop="25dp"
         android:textSize="@dimen/countdown_font_size_years"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

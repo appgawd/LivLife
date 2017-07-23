@@ -39,7 +39,7 @@ public class ViewLiveWallpaper extends AppCompatActivity {
 
         TextView quoteText = (TextView) findViewById(R.id.quote_text);
         quoteText.setTextColor(textColor);
-        quoteText.setText(prefs.getString("quoteText", getString(R.string.default_quote_text)));
+        quoteText.setText(prefs.getString("quoteText", getString(R.string.default_quote_text2)));
 
         int bgColor = prefs.getInt("bgColor", ContextCompat.getColor(this, R.color.androidDefaultActivityBackgroundWhite));
         findViewById(R.id.activity_view_live_wallpaper).setBackgroundColor(bgColor);

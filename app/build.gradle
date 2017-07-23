@@ -24,6 +24,7 @@ android {
 }
 
 dependencies {
+    compile 'com.github.GrenderG:Toasty:1.2.5'
     compile 'com.github.QuadFlask:colorpicker:0.0.13'
     compile 'com.google.code.gson:gson:2.6.1'
 

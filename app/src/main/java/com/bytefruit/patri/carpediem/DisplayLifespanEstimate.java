@@ -64,6 +64,8 @@ import com.flask.colorpicker.builder.ColorPickerDialogBuilder;
 
 import java.util.Date;
 
+import es.dmoral.toasty.Toasty;
+
 import static com.bytefruit.patri.carpediem.Utilities.getNavigationBarHeight;
 import static com.bytefruit.patri.carpediem.Utilities.getStatusBarHeight;
 import static com.bytefruit.patri.carpediem.Utilities.dpFromPx;
@@ -74,7 +76,7 @@ import static com.bytefruit.patri.carpediem.Utilities.mainBg;
 public class DisplayLifespanEstimate extends AppCompatActivity implements View.OnClickListener, View.OnTouchListener, SeekBar.OnSeekBarChangeListener, TextWatcher, ViewTreeObserver.OnGlobalLayoutListener{
 
     private static final String TAG = "CustomizeActivity";
-
+    private static boolean beenVisited = false;
     View textBounds;
     float dX, dY;
     RunCountdownThread runCountdownThread;
@@ -444,9 +446,12 @@ public class DisplayLifespanEstimate extends AppCompatActivity implements View.O
             rectangleAtTop.setVisibility(View.GONE);
             sizeSliderRl.setVisibility(View.GONE);
             findViewById(R.id.place_holder_view).setVisibility(View.GONE);
-        }else{
+        }else {
             quoteText.setVisibility(View.GONE);
-            Toast.makeText(this, "Note: you may drag the text to change it's position.", Toast.LENGTH_LONG).show();
+            if (beenVisited == false) {
+
+                Toasty.info(this, "Note: you may drag the text to change it's position.", Toast.LENGTH_LONG).show();
+            }
         }
     }
 
@@ -949,11 +954,13 @@ public class DisplayLifespanEstimate extends AppCompatActivity implements View.O
 
     public void onStop(){
         super.onStop();
+        beenVisited = true;
         runCountdownThread.cancel(true);
     }
 
     protected void onRestart() {
         super.onRestart();
+        beenVisited = true;
         startCountdown();
     }
 

@@ -20,6 +20,8 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 
+import es.dmoral.toasty.Toasty;
+
 public class LifespanCalculator extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener, View.OnClickListener{
 
     private ArrayList<LifeExpObject> CountriesAndLifeSpanArray = new  ArrayList<LifeExpObject>();
@@ -330,6 +332,7 @@ public class LifespanCalculator extends AppCompatActivity implements SeekBar.OnS
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.custom_button:
+
                 startActivity(new Intent(LifespanCalculator.this, CustomTime.class));
                 break;
             case R.id.set_lifespan_estimate_as_time_for_countdown:
@@ -346,13 +349,13 @@ public class LifespanCalculator extends AppCompatActivity implements SeekBar.OnS
             if(isAllChecksComplete[i] == null){
                 i = isAllChecksComplete.length;
                 isAllFieldsComplete = false;
-                Toast.makeText(this, "Oops! All fields must be complete.", Toast.LENGTH_SHORT).show();
+                Toasty.error(this, "Oops! All fields must be complete.", Toast.LENGTH_SHORT).show();
             }
         }
 
         if(isAllFieldsComplete) {
             boolean isBirthdayValid = true;
-            Toast notValidBday = Toast.makeText(this, "Oops! Date of birth must be set to a past date.", Toast.LENGTH_LONG);
+            Toast notValidBday = Toasty.error(this, "Oops! Date of birth must be set to a past date.", Toast.LENGTH_LONG);
 
             //check if valid bday
             Date currentDate = Calendar.getInstance().getTime();
@@ -381,7 +384,7 @@ public class LifespanCalculator extends AppCompatActivity implements SeekBar.OnS
             double ageYears = Utilities.getAgeYearsDecimal(birthday);
 
             if(yearsWorked.getProgress() + education.getProgress() > (int) ageYears){
-                Toast.makeText(this, "Oops! Total years worked + Total years of education must be less than your age.", Toast.LENGTH_LONG).show();
+                Toasty.error(this, "Oops! Total years worked + Total years of education must be less than your age.", Toast.LENGTH_LONG).show();
                 yeasPlusEducationValid = false;
             }
 
@@ -440,10 +443,11 @@ public class LifespanCalculator extends AppCompatActivity implements SeekBar.OnS
                     Date deathDate = Utilities.getDateYearsAhead(LifeLeftToLive);
                     Utilities.saveObjectToSharedPreference(this, "deathDate", "deathDateKey", deathDate);
 
+
                     startActivity(new Intent(this, MainActivity.class));
                 }
                 else{
-                    Toast.makeText(this, "Oops! Height and weight appear to be unrealistic.", Toast.LENGTH_LONG).show();
+                    Toasty.error(this, "Oops! Height and weight appear to be unrealistic.", Toast.LENGTH_LONG).show();
                 }
             }
         }

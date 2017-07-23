@@ -4,6 +4,7 @@ import android.app.WallpaperManager;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -25,6 +26,8 @@ import com.google.android.gms.ads.MobileAds;
 import java.lang.reflect.GenericArrayType;
 import java.util.Date;
 import java.util.Random;
+
+import es.dmoral.toasty.Toasty;
 
 import static com.bytefruit.patri.carpediem.Utilities.setFont;
 
@@ -57,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //startIAB();
         //String countdownFont = "roboto";
         Typeface roboto = Typeface.createFromAsset(this.getAssets(), "fonts/roboto.ttf");
+
         countdown = (TextView) findViewById(R.id.countdown);
         //setFont(countdownFont, countdown ,this);
         TextView quoteText = (TextView) findViewById(R.id.countdown);
@@ -64,14 +68,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         quoteText.setTypeface(roboto);
         //setFont(countdownFont, quoteText, this);
 
-        runAds();
+        //runAds();
 
         //startButtonListeners();
 
 
         startCountdown();
 
-        Glide.with(this).load(R.drawable.llcover).into((ImageView) findViewById(R.id.logo));
+        Glide.with(this).load(R.drawable.logo).into((ImageView) findViewById(R.id.logo));
+
+
+
+        Toasty.Config.getInstance().setErrorColor(Color.parseColor("#e74c3c")).apply();
+        Toasty.Config.getInstance().setSuccessColor(Color.parseColor("#27ae60")).apply();
+        Toasty.Config.getInstance().setWarningColor(Color.parseColor("#f1c40f")).apply();
+        Toasty.Config.getInstance().setInfoColor(Color.parseColor("#4ca6ff")).apply();
+
+
+
     }
 
     /*void startIAB(){

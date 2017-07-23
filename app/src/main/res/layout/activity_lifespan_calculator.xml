@@ -22,7 +22,7 @@
                 android:layout_centerInParent="true"
                 android:layout_width="0dp"
                 android:layout_marginLeft="-10dp"
-                android:layout_marginRight="25dp"
+                android:layout_marginRight="35dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/divider"/>
 
@@ -33,12 +33,15 @@
             android:gravity="center"
             android:layout_toLeftOf="@id/divider">
 
-            <Button android:id="@+id/calculator_button"
+            <Button
+                android:id="@+id/calculator_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:background="@android:color/transparent"
                 android:text="@string/lifespan_calculator"
-                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+
                 android:textColor="@android:color/black" />
 
             <ImageView

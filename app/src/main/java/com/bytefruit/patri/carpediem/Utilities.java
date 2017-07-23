@@ -23,8 +23,12 @@ public class Utilities {
     final static String[] min = new String[60];
     final static String[] amPm = {"AM", "PM"};
 
-    final static String[] fonts = {"heebo_thin", "heebo_thin", "bebas", "heebo_thin", "nova", "iceland", "heebo_thin", "nova", "iceland", "heebo_thin", "nova", "iceland"};
-    final static String[] fontsC = {"heebo_light", "heebo_light", "ubuntu_thin", "nova", "nova", "roboto", "iceland", "iceland", "nova", "nova", "nova", "heebo_thin"};
+
+
+    final static String[] fonts = {"heebo_thin", "lato", "unica", "geo", "pragat_light", "drod", "barrio", "weird", "nova", "inco", "roboto", "cut"};
+    final static String[] fontsC = {"heebo_light", "lato_bold", "unica", "geo2", "pragat_bold", "drod2", "barrio", "weird", "nova", "inco2", "roboto", "cut"};
+
+    //final static String[] fontsC = {"barrio", "press", "", "", "", "", "", "unica", "", "", "", ""};
 
     public static final int mainBg  = R.drawable.white;
 
@@ -459,11 +463,11 @@ public class Utilities {
                         break;
                     case R.drawable.emerald:
                         setFont(fonts[6], tv);//heebo thin
-                        tv.setTextColor(Color.WHITE);
+                        tv.setTextColor(Color.BLACK);
                         break;
                     case R.drawable.blue:
                         setFont(fonts[7], tv); //nova
-                        tv.setTextColor(Color.WHITE);
+                        tv.setTextColor(Color.BLACK);
                         break;
                     case R.drawable.purple:
                         setFont(fonts[8], tv);//heebo thin
@@ -471,11 +475,14 @@ public class Utilities {
                         break;
                     case R.drawable.pink:
                         setFont(fonts[9], tv);//heebo_thin
-                        tv.setTextColor(Color.WHITE);
+                        tv.setTextColor(Color.BLACK);
                         break;
-                    case R.drawable.red:
+                    case R.drawable.mainpic:
                         setFont(fonts[10], tv);//iceland
-                        tv.setTextColor(Color.WHITE);
+                        int blu = Color.parseColor("#4ca6ff");
+
+                        tv.setTextColor(blu);
+
                         break;
                     case R.drawable.space:
                         setFont(fonts[11], tv);
@@ -503,7 +510,7 @@ public class Utilities {
                     break;
                 case R.drawable.yellow:
                     setFont(fontsC[4], tvs[0]);//iceland
-                    tvs[0].setTextColor(Color.WHITE);
+                    tvs[0].setTextColor(Color.BLACK);
                     break;
                 case R.drawable.orange:
                     setFont(fontsC[5], tvs[0]);
@@ -511,11 +518,11 @@ public class Utilities {
                     break;
                 case R.drawable.emerald:
                     setFont(fontsC[6], tvs[0]);//heebo thin
-                    tvs[0].setTextColor(Color.WHITE);
+                    tvs[0].setTextColor(Color.BLACK);
                     break;
                 case R.drawable.blue:
                     setFont(fontsC[7], tvs[0]); //nova
-                    tvs[0].setTextColor(Color.WHITE);
+                    tvs[0].setTextColor(Color.BLACK);
                     break;
                 case R.drawable.purple:
                     setFont(fontsC[8], tvs[0]);//heebo thin
@@ -523,9 +530,9 @@ public class Utilities {
                     break;
                 case R.drawable.pink:
                     setFont(fontsC[9], tvs[0]);//heebo_thin
-                    tvs[0].setTextColor(Color.WHITE);
+                    tvs[0].setTextColor(Color.BLACK);
                     break;
-                case R.drawable.red:
+                case R.drawable.mainpic:
                     setFont(fontsC[10], tvs[0]);//iceland
                     tvs[0].setTextColor(Color.WHITE);
                     break;

@@ -59,7 +59,7 @@ public class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
                 resource = R.drawable.pink;
                 break;
             case 10:
-                resource = R.drawable.red;
+                resource = R.drawable.mainpic;
                 break;
             case 11:
                 resource = R.drawable.space;

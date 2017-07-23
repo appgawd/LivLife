@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:text="SET BACKGROUND"
         android:layout_below="@+id/pager"
-        android:background="#ff6565"
+        android:background="#2ecc71"
         android:textColor="#ffffff"
         android:layout_alignRight="@+id/pager"
         android:layout_alignLeft="@+id/pager"/>

@@ -10,6 +10,8 @@ import android.widget.Toast;
 import java.util.Calendar;
 import java.util.Date;
 
+import es.dmoral.toasty.Toasty;
+
 public class CustomTime extends AppCompatActivity implements  View.OnClickListener{
 
     private NumberPicker datePickerMonths;
@@ -134,7 +136,7 @@ public class CustomTime extends AppCompatActivity implements  View.OnClickListen
             startActivity(new Intent(CustomTime.this, MainActivity.class));
             //call ricks algo start the timer
         }else{
-            Toast.makeText(this, "Must input a future date and time.", Toast.LENGTH_SHORT).show();
+            Toasty.error(this, "Must input a future date and time.", Toast.LENGTH_SHORT).show();
         }
 
         //do shit and same as in the life set countdown
